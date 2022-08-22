@@ -10972,7 +10972,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-document.addEventListener("load", initPano2vr());
+var iFrame,
+    bgVideo,
+    loaderStep0,
+    loaderStep1,
+    loaderStep2,
+    loaderStep3,
+    resetIframeLoader,
+    playerWrapper = '';
+
+if (virtualTourData.xml !== undefined) {
+  document.addEventListener("load", initPano2vr());
+}
+
+if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('#video-background').length) {
+  bgVideo = document.getElementById('video-background');
+  bgVideo.addEventListener('loadeddata', function (e) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#loaderStep1').addClass('pano-loaded');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#loaderStep1 .loader-wrapper').append(jquery__WEBPACK_IMPORTED_MODULE_0___default()('#loaderStep0 .loader-container')).fadeIn(200);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#loaderStep0').hide();
+    bgVideo.play();
+  }, true);
+}
 
 function initPano2vr() {
   // create the panorama player with the container
@@ -11035,13 +11056,6 @@ function initPano2vr() {
 jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#iframe_1').trigger('focus');
 });
-var iFrame,
-    loaderStep0,
-    loaderStep1,
-    loaderStep2,
-    loaderStep3,
-    resetIframeLoader,
-    playerWrapper = '';
 var isReloadingIframe = false;
 var iframes = {
   desktop: virtualTourData.virtual_tour_desktop,
@@ -11119,6 +11133,12 @@ var messageHandler = function messageHandler(event) {
 
       if (isReloadingIframe) return; // Hide first loader
 
+      console.log('bg video', bgVideo);
+
+      if (bgVideo) {
+        bgVideo.pause();
+      }
+
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(loaderStep1).fadeOut(1000); // Show the header
       // playerWrapper.classList.add('playing')
 
@@ -11195,19 +11215,21 @@ var checkScreenSize = function checkScreenSize(referrer) {
   var windowRatio = windowWidth / jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height();
   var videoRatio = 16 / 9;
 
-  if (windowWidth > 1024) {
-    if (iFrame.src !== iframes.desktop) {
-      switchIframe('desktop', referrer);
-    }
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(iFrame).length) {
+    if (windowWidth > 1024) {
+      if (iFrame.src !== iframes.desktop) {
+        switchIframe('desktop', referrer);
+      }
 
-    if (windowRatio <= videoRatio) {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('portrait');
+      if (windowRatio <= videoRatio) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('portrait');
+      } else {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('portrait');
+      }
     } else {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('portrait');
-    }
-  } else {
-    if (iFrame.src !== iframes.mobile) {
-      switchIframe('mobile', referrer);
+      if (iFrame.src !== iframes.mobile) {
+        switchIframe('mobile', referrer);
+      }
     }
   }
 };

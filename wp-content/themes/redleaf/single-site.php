@@ -9,17 +9,18 @@
 
 get_header();
 
+$loader_type = get_field('loading_type');
 $virtual_tour_data = [
-    'xml' => wp_get_attachment_url(get_field('pano_xml')),
     'virtual_tour_desktop' => get_field('virtual_tour_desktop'),
     'virtual_tour_mobile' => get_field('virtual_tour_mobile')
 ];
 
+if ( $loader_type == 'pano2vr' ) {
+    $virtual_tour_data['xml'] = wp_get_attachment_url(get_field('pano_xml'));
+}
+
 wp_localize_script( 'red-leaf-virtual-tour', 'virtualTourData', $virtual_tour_data);
 
-// if ( $pano = get_field('pano_2vr_xml') ) {
-//     wp_localize_script( 'red-leaf-virtual-tour', 'redLeafPano', [ 'xml' => $pano ]);
-// }
 echo get_template_directory_uri() . '/images/tiles'; ?>
     <div id="loaderStep0" class="loader">
         <?php virtual_tour_loader(); ?>
@@ -29,7 +30,14 @@ echo get_template_directory_uri() . '/images/tiles'; ?>
             class="loader loading-pano">
         <div class="loader-header">
             <div id="container" style="width:100%;height:100%;overflow:hidden;position: relative;">
-            	<br>Loading...<br><br>
+            	<?php
+                if ( $loader_type == 'video' ) {
+                    $video_url = get_field('video_url'); ?>
+                    <div class="video-background">
+                        <video id="video-background" class="video-background__video" muted="true" autoplay="" loop=""><source src="<?php echo $video_url; ?>" type="video/mp4"></video>
+                    </div>
+                <?php 
+                } ?>
         	</div>
             <noscript>
                 <p><b>Please enable Javascript!</b></p>

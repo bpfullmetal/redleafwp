@@ -139,6 +139,8 @@ add_action( 'widgets_init', 'redleaf_widgets_init' );
  */
 function redleaf_scripts() {
 
+	global $post;
+	$id = $post->id;
 	$manifest = json_decode(file_get_contents('dist/assets.json', true));
 	$main = $manifest->main;
 	$the_theme     = wp_get_theme();
@@ -147,11 +149,13 @@ function redleaf_scripts() {
 
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
 
-	if ( is_singular('site') ) { 
-		wp_enqueue_script( 'red-leaf-pano', get_template_directory_uri() . '/js/pano2vr_player.js', array(), $theme_version, true );
-		wp_enqueue_script( 'red-leaf-three', get_template_directory_uri() . '/js/three.min.js', array(), $theme_version, true );
-		wp_enqueue_script( 'red-leaf-webxr', get_template_directory_uri() . '/js/webxr-polyfill.min.js', array(), $theme_version, true );
-		wp_enqueue_script( 'red-leaf-active-element', get_template_directory_uri() . '/js/active-element.js', array(), $theme_version, true );
+	if ( is_singular('site') ) {
+		if ( get_field('loading_type', $id) == 'pano2vr' ) {
+			wp_enqueue_script( 'red-leaf-pano', get_template_directory_uri() . '/js/pano2vr_player.js', array(), $theme_version, true );
+			wp_enqueue_script( 'red-leaf-three', get_template_directory_uri() . '/js/three.min.js', array(), $theme_version, true );
+			wp_enqueue_script( 'red-leaf-webxr', get_template_directory_uri() . '/js/webxr-polyfill.min.js', array(), $theme_version, true );
+			
+		}
 		wp_enqueue_script( 'red-leaf-virtual-tour', get_template_directory_uri() . $manifest->virtualtour->js, array(), $theme_version, true );
 	}
 	

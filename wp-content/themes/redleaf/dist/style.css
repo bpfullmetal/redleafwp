@@ -1594,6 +1594,18 @@ a:hover {
 #loaderStep1.pano-loaded {
   opacity: 1;
 }
+#loaderStep1.pano-loaded #video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
 
 #loaderStep1 .loader-container {
   display: flex;

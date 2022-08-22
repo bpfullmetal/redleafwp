@@ -1,6 +1,21 @@
 import $ from 'jquery';
 
-document.addEventListener("load", initPano2vr() );
+let iFrame, bgVideo, loaderStep0, loaderStep1, loaderStep2, loaderStep3, resetIframeLoader, playerWrapper = ''
+
+if ( virtualTourData.xml !== undefined ) {
+	document.addEventListener("load", initPano2vr() );
+}
+
+if ( $('#video-background').length ) {
+	bgVideo = document.getElementById('video-background');
+
+	bgVideo.addEventListener('loadeddata', function(e) {
+		$('#loaderStep1').addClass('pano-loaded')
+		$('#loaderStep1 .loader-wrapper').append($('#loaderStep0 .loader-container')).fadeIn(200)
+		$('#loaderStep0').hide()
+		bgVideo.play();
+	}, true);
+}
 
 function initPano2vr() {
     // create the panorama player with the container
@@ -57,8 +72,6 @@ function initPano2vr() {
 $("body").on('click', function(){
     $('#iframe_1').trigger('focus');
 });
-
-let iFrame, loaderStep0, loaderStep1, loaderStep2, loaderStep3, resetIframeLoader, playerWrapper = ''
 
 let isReloadingIframe = false;
 
@@ -143,6 +156,10 @@ const messageHandler = (event) => {
 			if ( isReloadingIframe ) return
 
 			// Hide first loader
+			console.log('bg video', bgVideo)
+			if ( bgVideo ) {
+				bgVideo.pause()
+			}
 			$(loaderStep1).fadeOut(1000)
 
 			// Show the header
@@ -222,18 +239,20 @@ const checkScreenSize = referrer => {
 	const windowWidth = $(window).width()
 	const windowRatio = windowWidth / $(window).height()
 	const videoRatio = 16/9
-	if ( windowWidth > 1024 ) {
-		if ( iFrame.src !== iframes.desktop ) {
-			switchIframe('desktop', referrer)
-		}
-		if ( windowRatio <= videoRatio ) {
-			$('body').addClass('portrait')
+	if ( $(iFrame).length ) {
+		if ( windowWidth > 1024 ) {
+			if ( iFrame.src !== iframes.desktop ) {
+				switchIframe('desktop', referrer)
+			}
+			if ( windowRatio <= videoRatio ) {
+				$('body').addClass('portrait')
+			} else {
+				$('body').removeClass('portrait')
+			}
 		} else {
-			$('body').removeClass('portrait')
-		}
-	} else {
-		if ( iFrame.src !== iframes.mobile ) {
-			switchIframe('mobile', referrer)
+			if ( iFrame.src !== iframes.mobile ) {
+				switchIframe('mobile', referrer)
+			}
 		}
 	}
 }

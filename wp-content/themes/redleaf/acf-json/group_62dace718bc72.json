@@ -308,13 +308,46 @@
             "maxlength": ""
         },
         {
+            "key": "field_62fe54494321c",
+            "label": "Loading Screen Type",
+            "name": "loading_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "pano2vr": "Pano2VR",
+                "video": "Video"
+            },
+            "default_value": "pano2vr",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_62db15cc35644",
             "label": "Upload tiles",
             "name": "upload_tiles",
             "type": "file",
             "instructions": "upload the full tiles folder.",
-            "required": 1,
-            "conditional_logic": 0,
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62fe54494321c",
+                        "operator": "==",
+                        "value": "pano2vr"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -332,12 +365,17 @@
             "name": "pano_xml",
             "type": "file",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_62db15cc35644",
                         "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_62fe54494321c",
+                        "operator": "==",
+                        "value": "pano2vr"
                     }
                 ]
             ],
@@ -351,6 +389,30 @@
             "min_size": "",
             "max_size": "",
             "mime_types": ".xml"
+        },
+        {
+            "key": "field_62fe54ab4321e",
+            "label": "Video URL",
+            "name": "video_url",
+            "type": "url",
+            "instructions": "url of the hosted video",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62fe54494321c",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -371,5 +433,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1659719809
+    "modified": 1661194792
 }
