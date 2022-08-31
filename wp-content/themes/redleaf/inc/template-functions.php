@@ -98,12 +98,13 @@ if ( !function_exists('log_it') ) {
 	}
 }
 
-function virtual_tour_loader () {
-	ob_start(); ?>
+function virtual_tour_loader ($video) {
+	ob_start();
+	$preview_text = $video ? 'Video' : '360' ?>
 	<div class="loader-container">
 		<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 		<span class="loading-virtual-tour">Virtual Tour Loading</span>
-		<span class="loading-text">Enjoy This 360 Preview While You Wait!</span>
+		<span class="loading-text">Enjoy This <?php echo $preview_text; ?> Preview While You Wait!</span>
 	</div>
 	<?php
 	echo ob_get_clean();

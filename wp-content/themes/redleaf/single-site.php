@@ -23,7 +23,7 @@ wp_localize_script( 'red-leaf-virtual-tour', 'virtualTourData', $virtual_tour_da
 
 echo get_template_directory_uri() . '/images/tiles'; ?>
     <div id="loaderStep0" class="loader">
-        <?php virtual_tour_loader(); ?>
+        <?php virtual_tour_loader($loader_type); ?>
     </div>
     <div id="loaderStep1"
             style="top: 0px; left: 0px; width: 100%; height: 100%;"
@@ -34,7 +34,7 @@ echo get_template_directory_uri() . '/images/tiles'; ?>
                 if ( $loader_type == 'video' ) {
                     $video_url = get_field('video_url'); ?>
                     <div class="video-background">
-                        <video id="video-background" class="video-background__video" muted="true" autoplay="" loop=""><source src="<?php echo $video_url; ?>" type="video/mp4"></video>
+                        <video id="video-background" class="video-background__video" preload muted autoplay loop playsinline><source src="<?php echo $video_url; ?>" type="video/mp4"></video>
                     </div>
                 <?php 
                 } ?>
@@ -70,7 +70,7 @@ echo get_template_directory_uri() . '/images/tiles'; ?>
     <div id="resetIframeLoader" class="loader">
         <div class="loader-bg"></div>
         <div class="loader-wrapper">
-            <?php virtual_tour_loader(); ?>
+            <?php virtual_tour_loader($loader_type); ?>
         </div>
     </div>
 

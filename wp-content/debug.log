@@ -1,32 +1,179 @@
-[05-Aug-2022 17:13:18 UTC] Array
-(
-    [0] => .
-    [1] => ..
-    [2] => .DS_Store
-    [3] => node1
-)
-
-[05-Aug-2022 17:13:18 UTC] node1
-[05-Aug-2022 17:13:29 UTC] http://localhost:8888/clearmarble/redleaf/wp-content/uploads/2022/08/pano.xml
-[05-Aug-2022 17:13:51 UTC] http://localhost:8888/clearmarble/redleaf/wp-content/uploads/2022/08/pano.xml
-[05-Aug-2022 17:14:59 UTC] Array
-(
-    [0] => .
-    [1] => ..
-    [2] => .DS_Store
-    [3] => node1
-)
-
-[05-Aug-2022 17:14:59 UTC] node1
-[05-Aug-2022 17:15:02 UTC] http://localhost:8888/clearmarble/redleaf/wp-content/uploads/2022/08/pano.xml
-[05-Aug-2022 17:17:26 UTC] Array
-(
-    [0] => .
-    [1] => ..
-    [2] => .DS_Store
-    [3] => node1
-)
-
-[05-Aug-2022 17:17:26 UTC] node1
-[05-Aug-2022 17:43:00 UTC] PHP Notice:  Undefined variable: cnt in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/plugins/multiple-domain-mapping-on-single-site/multidomainmapping.php on line 425
-[05-Aug-2022 17:44:31 UTC] PHP Notice:  Undefined index: customheadcode in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/plugins/multiple-domain-mapping-on-single-site/multidomainmapping.php on line 445
+[22-Aug-2022 20:03:16 UTC] tiles
+[22-Aug-2022 20:03:16 UTC] 1013
+[22-Aug-2022 20:03:26 UTC] tiles
+[22-Aug-2022 20:03:26 UTC] 
+[22-Aug-2022 20:03:45 UTC] tiles
+[22-Aug-2022 20:03:45 UTC] 1014
+[22-Aug-2022 20:03:45 UTC] PHP Warning:  strpos() expects parameter 1 to be string, resource given in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/post.php on line 799
+[22-Aug-2022 20:03:45 UTC] PHP Notice:  Function wpdb::prepare was called <strong>incorrectly</strong>. Unsupported value type (resource (closed)). Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.8.2.) in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/functions.php on line 5831
+[22-Aug-2022 20:03:45 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:03:45 UTC] 1
+[22-Aug-2022 20:05:22 UTC] tiles
+[22-Aug-2022 20:05:22 UTC] 
+[22-Aug-2022 20:05:42 UTC] tiles
+[22-Aug-2022 20:05:42 UTC] 1016
+[22-Aug-2022 20:05:43 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:05:43 UTC] 
+[22-Aug-2022 20:06:57 UTC] tiles
+[22-Aug-2022 20:06:57 UTC] 
+[22-Aug-2022 20:07:07 UTC] tiles
+[22-Aug-2022 20:07:07 UTC] 1016
+[22-Aug-2022 20:07:07 UTC] PHP Warning:  strpos() expects parameter 1 to be string, resource given in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/post.php on line 799
+[22-Aug-2022 20:07:07 UTC] PHP Notice:  Function wpdb::prepare was called <strong>incorrectly</strong>. Unsupported value type (resource (closed)). Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.8.2.) in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/functions.php on line 5831
+[22-Aug-2022 20:07:07 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:07:07 UTC] 
+[22-Aug-2022 20:08:47 UTC] tiles
+[22-Aug-2022 20:08:47 UTC] 1017
+[22-Aug-2022 20:08:47 UTC] tiles
+[22-Aug-2022 20:08:47 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:08:47 UTC] 
+[22-Aug-2022 20:11:19 UTC] tiles
+[22-Aug-2022 20:11:19 UTC] 1018
+[22-Aug-2022 20:11:19 UTC] tiles
+[22-Aug-2022 20:11:19 UTC] PHP Warning:  file_get_contents(/Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml): failed to open stream: No such file or directory in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 178
+[22-Aug-2022 20:11:19 UTC] PHP Warning:  DOMDocument::loadXML(): Empty string supplied as input in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 180
+[22-Aug-2022 20:11:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php:182
+Stack trace:
+#0 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(309): my_acf_update_value_pre_save(63, Object(WP_Post))
+#1 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/post.php(4662): do_action('save_post_site', 63, Object(WP_Post), true)
+#4 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/post.php(4775): wp_insert_post(Array, false, true)
+#5 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-admin/includes/post.php(426): wp_update_post(Array)
+#6 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-admin/post.php(227): edit_post()
+#7 {main}
+  thrown in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 182
+[22-Aug-2022 20:11:35 UTC] tiles
+[22-Aug-2022 20:11:35 UTC] 1018
+[22-Aug-2022 20:11:35 UTC] tiles
+[22-Aug-2022 20:11:35 UTC] PHP Warning:  file_get_contents(/Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml): failed to open stream: No such file or directory in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 178
+[22-Aug-2022 20:11:35 UTC] PHP Warning:  DOMDocument::loadXML(): Empty string supplied as input in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 180
+[22-Aug-2022 20:11:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php:182
+Stack trace:
+#0 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(309): my_acf_update_value_pre_save(63, Object(WP_Post))
+#1 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/post.php(4662): do_action('save_post_site', 63, Object(WP_Post), true)
+#4 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/post.php(4775): wp_insert_post(Array, false, true)
+#5 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-admin/includes/post.php(426): wp_update_post(Array)
+#6 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-admin/post.php(227): edit_post()
+#7 {main}
+  thrown in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 182
+[22-Aug-2022 20:11:56 UTC] tiles
+[22-Aug-2022 20:11:56 UTC] 1019
+[22-Aug-2022 20:11:56 UTC] tiles
+[22-Aug-2022 20:11:56 UTC] PHP Warning:  file_get_contents(/Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml): failed to open stream: No such file or directory in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 178
+[22-Aug-2022 20:11:56 UTC] PHP Warning:  DOMDocument::loadXML(): Empty string supplied as input in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 180
+[22-Aug-2022 20:11:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php:182
+Stack trace:
+#0 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(309): my_acf_update_value_pre_save(63, Object(WP_Post))
+#1 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/post.php(4662): do_action('save_post_site', 63, Object(WP_Post), true)
+#4 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/post.php(4775): wp_insert_post(Array, false, true)
+#5 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-admin/includes/post.php(426): wp_update_post(Array)
+#6 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-admin/post.php(227): edit_post()
+#7 {main}
+  thrown in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 182
+[22-Aug-2022 20:14:39 UTC] tiles
+[22-Aug-2022 20:14:39 UTC] 1020
+[22-Aug-2022 20:14:39 UTC] tiles
+[22-Aug-2022 20:14:39 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:14:39 UTC] 1
+[22-Aug-2022 20:16:11 UTC] tiles
+[22-Aug-2022 20:16:11 UTC] 1022
+[22-Aug-2022 20:16:11 UTC] tiles
+[22-Aug-2022 20:16:11 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:16:11 UTC] 1
+[22-Aug-2022 20:17:07 UTC] tiles
+[22-Aug-2022 20:17:07 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/tiles-1.zip
+[22-Aug-2022 20:17:07 UTC] tiles
+[22-Aug-2022 20:17:07 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:17:07 UTC] 
+[22-Aug-2022 20:17:47 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php:143
+Stack trace:
+#0 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(307): redleaf_scripts('')
+#1 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/script-loader.php(2156): do_action('wp_enqueue_scri...')
+#4 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(307): wp_enqueue_scripts('')
+#5 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#7 /Users/brandonphillips/Sites/clearmarble/redleaf/wp in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[22-Aug-2022 20:18:10 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[22-Aug-2022 20:18:19 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[22-Aug-2022 20:23:13 UTC] tiles
+[22-Aug-2022 20:23:13 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/tiles.zip
+[22-Aug-2022 20:23:13 UTC] tiles
+[22-Aug-2022 20:23:13 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:23:13 UTC] 
+[22-Aug-2022 20:24:56 UTC] tiles
+[22-Aug-2022 20:24:56 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/tiles.zip
+[22-Aug-2022 20:24:56 UTC] tiles
+[22-Aug-2022 20:24:56 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:24:56 UTC] 
+[22-Aug-2022 20:29:01 UTC] tiles
+[22-Aug-2022 20:29:01 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/tiles.zip
+[22-Aug-2022 20:29:01 UTC] tiles
+[22-Aug-2022 20:29:01 UTC] /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/uploads/2022/08/pano-site-63.xml
+[22-Aug-2022 20:29:01 UTC] 1
+[31-Aug-2022 20:16:11 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:16:23 UTC] PHP Fatal error:  Allowed memory size of 41943040 bytes exhausted (tried to allocate 1052672 bytes) in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/SimplePie/Parser.php on line 175
+[31-Aug-2022 20:16:29 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:16:45 UTC] PHP Notice:  Undefined index: field_62db15cc35644 in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 127
+[31-Aug-2022 20:17:49 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:19:33 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:20:25 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:21:33 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:24:17 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:25:54 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function virtual_tour_loader(), 0 passed in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/single-site.php on line 26 and exactly 1 expected in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php:101
+Stack trace:
+#0 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/single-site.php(26): virtual_tour_loader()
+#1 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/template-loader.php(106): include('/Users/brandonp...')
+#2 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-blog-header.php(19): require_once('/Users/brandonp...')
+#3 /Users/brandonphillips/Sites/clearmarble/redleaf/index.php(17): require('/Users/brandonp...')
+#4 {main}
+  thrown in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 101
+[31-Aug-2022 20:25:54 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function virtual_tour_loader(), 0 passed in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/single-site.php on line 26 and exactly 1 expected in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php:101
+Stack trace:
+#0 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/single-site.php(26): virtual_tour_loader()
+#1 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/template-loader.php(106): include('/Users/brandonp...')
+#2 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-blog-header.php(19): require_once('/Users/brandonp...')
+#3 /Users/brandonphillips/Sites/clearmarble/redleaf/index.php(17): require('/Users/brandonp...')
+#4 {main}
+  thrown in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 101
+[31-Aug-2022 20:26:48 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:30:01 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:30:24 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:32:17 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:32:40 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:32:40 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:34:56 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:36:08 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:37:18 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:39:33 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:39:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function virtual_tour_loader(), 0 passed in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/single-site.php on line 26 and exactly 1 expected in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php:101
+Stack trace:
+#0 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/single-site.php(26): virtual_tour_loader()
+#1 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/template-loader.php(106): include('/Users/brandonp...')
+#2 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-blog-header.php(19): require_once('/Users/brandonp...')
+#3 /Users/brandonphillips/Sites/clearmarble/redleaf/index.php(17): require('/Users/brandonp...')
+#4 {main}
+  thrown in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 101
+[31-Aug-2022 20:39:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function virtual_tour_loader(), 0 passed in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/single-site.php on line 26 and exactly 1 expected in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php:101
+Stack trace:
+#0 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/single-site.php(26): virtual_tour_loader()
+#1 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-includes/template-loader.php(106): include('/Users/brandonp...')
+#2 /Users/brandonphillips/Sites/clearmarble/redleaf/wp-blog-header.php(19): require_once('/Users/brandonp...')
+#3 /Users/brandonphillips/Sites/clearmarble/redleaf/index.php(17): require('/Users/brandonp...')
+#4 {main}
+  thrown in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/inc/template-functions.php on line 101
+[31-Aug-2022 20:41:03 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:41:31 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:41:46 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:42:55 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:43:08 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:43:57 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:46:03 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:48:36 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143
+[31-Aug-2022 20:49:45 UTC] PHP Notice:  Trying to get property 'id' of non-object in /Users/brandonphillips/Sites/clearmarble/redleaf/wp-content/themes/redleaf/functions.php on line 143

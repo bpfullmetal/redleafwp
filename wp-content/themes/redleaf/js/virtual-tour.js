@@ -8,12 +8,14 @@ if ( virtualTourData.xml !== undefined ) {
 
 if ( $('#video-background').length ) {
 	bgVideo = document.getElementById('video-background');
-
+	bgVideo.volume = 0.0;
+	bgVideo.autoplay = true;
+	console.log(bgVideo.volume)
 	bgVideo.addEventListener('loadeddata', function(e) {
 		$('#loaderStep1').addClass('pano-loaded')
 		$('#loaderStep1 .loader-wrapper').append($('#loaderStep0 .loader-container')).fadeIn(200)
 		$('#loaderStep0').hide()
-		bgVideo.play();
+		// bgVideo.play();
 	}, true);
 }
 

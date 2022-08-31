@@ -10987,11 +10987,13 @@ if (virtualTourData.xml !== undefined) {
 
 if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('#video-background').length) {
   bgVideo = document.getElementById('video-background');
+  bgVideo.volume = 0.0;
+  bgVideo.autoplay = true;
+  console.log(bgVideo.volume);
   bgVideo.addEventListener('loadeddata', function (e) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('#loaderStep1').addClass('pano-loaded');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('#loaderStep1 .loader-wrapper').append(jquery__WEBPACK_IMPORTED_MODULE_0___default()('#loaderStep0 .loader-container')).fadeIn(200);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#loaderStep0').hide();
-    bgVideo.play();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#loaderStep0').hide(); // bgVideo.play();
   }, true);
 }
 
