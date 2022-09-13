@@ -24,9 +24,7 @@ if ( $loader_type == 'pano2vr' ) {
 $display_modal = get_field('display_info_modal');
 $display_header = get_field('display_header');
 
-wp_localize_script( 'red-leaf-virtual-tour', 'virtualTourData', $virtual_tour_data);
-
-echo get_template_directory_uri() . '/images/tiles'; ?>
+wp_localize_script( 'red-leaf-virtual-tour', 'virtualTourData', $virtual_tour_data); ?>
     <?php 
     if ( $display_header ) { ?>
         <div id="header">
