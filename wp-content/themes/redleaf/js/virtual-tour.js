@@ -225,12 +225,22 @@ window.addEventListener("resize", function() {
 	checkScreenSize('resize')
 })
 
+$('#close-instructions').on('click', function () {
+	hideInstructions()
+})
+
 const showInstructions = showClose => {
 	const instructions = document.getElementById('instructions-container')
 	instructions.classList.add('visible')
 
 	const helpButton = document.getElementById('help-button')
 	helpButton.style.display = 'none'
+
+	if ( showClose ) {
+		$('#close-instructions').show();
+	} else {
+		$('#close-instructions').hide();
+	}
 }
 
 const hideInstructions = () => {
@@ -249,6 +259,7 @@ const checkScreenSize = referrer => {
 		if ( windowWidth > 1024 ) {
 			if ( iFrame.src !== iframes.desktop ) {
 				switchIframe('desktop', referrer)
+				hideInstructions()
 			}
 			if ( windowRatio <= videoRatio ) {
 				$('body').addClass('portrait')
@@ -258,6 +269,7 @@ const checkScreenSize = referrer => {
 		} else {
 			if ( iFrame.src !== iframes.mobile ) {
 				switchIframe('mobile', referrer)
+				hideInstructions()
 			}
 		}
 		console.log()

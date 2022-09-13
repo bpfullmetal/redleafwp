@@ -11205,12 +11205,21 @@ window.addEventListener('message', function (message) {
 window.addEventListener("resize", function () {
   checkScreenSize('resize');
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('#close-instructions').on('click', function () {
+  hideInstructions();
+});
 
 var showInstructions = function showInstructions(showClose) {
   var instructions = document.getElementById('instructions-container');
   instructions.classList.add('visible');
   var helpButton = document.getElementById('help-button');
   helpButton.style.display = 'none';
+
+  if (showClose) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#close-instructions').show();
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#close-instructions').hide();
+  }
 };
 
 var hideInstructions = function hideInstructions() {
@@ -11229,6 +11238,7 @@ var checkScreenSize = function checkScreenSize(referrer) {
     if (windowWidth > 1024) {
       if (iFrame.src !== iframes.desktop) {
         switchIframe('desktop', referrer);
+        hideInstructions();
       }
 
       if (windowRatio <= videoRatio) {
@@ -11239,6 +11249,7 @@ var checkScreenSize = function checkScreenSize(referrer) {
     } else {
       if (iFrame.src !== iframes.mobile) {
         switchIframe('mobile', referrer);
+        hideInstructions();
       }
     }
 

@@ -110,7 +110,10 @@ function virtual_tour_loader ($video, $loader_text = false, $loader_subtext = fa
 	<div class="loader-container">
 		<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 		<span class="loading-virtual-tour"><?php echo $preview_text; ?></span>
-		<span class="loading-text"><?php echo $preview_subtext; ?></span>
+		<?php if ( $video !== null ) { ?>
+			<span class="loading-text"><?php echo $preview_subtext; ?></span>
+		<?php 
+		} ?>
 	</div>
 	<?php
 	echo ob_get_clean();
