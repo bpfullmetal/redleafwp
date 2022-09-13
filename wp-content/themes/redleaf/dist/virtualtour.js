@@ -11148,6 +11148,12 @@ var messageHandler = function messageHandler(event) {
 
       setTimeout(function () {
         loaderStep2.classList.add('loaded');
+        setTimeout(function () {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#play-button-wrapper').css({
+            opacity: 1,
+            'pointer-events': 'all'
+          });
+        }, 1000);
       }, 800); // Show the virtual tour
 
       iFrame.style.visibility = "visible";
@@ -11190,6 +11196,8 @@ var messageHandler = function messageHandler(event) {
 
 window.addEventListener('message', messageHandler);
 window.addEventListener('message', function (message) {
+  console.log('iframe message', message);
+
   if (message.data.type === '_focus') {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(iFrame).focus();
   }
@@ -11233,6 +11241,8 @@ var checkScreenSize = function checkScreenSize(referrer) {
         switchIframe('mobile', referrer);
       }
     }
+
+    console.log();
   }
 };
 

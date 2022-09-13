@@ -3,6 +3,218 @@
     "title": "Site Fields",
     "fields": [
         {
+            "key": "field_6320de7c5703f",
+            "label": "Loading Screen",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62fe54494321c",
+            "label": "Loading Screen Type",
+            "name": "loading_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "pano2vr": "Pano2VR",
+                "video": "Video"
+            },
+            "default_value": "pano2vr",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_62db15cc35644",
+            "label": "Upload tiles",
+            "name": "upload_tiles",
+            "type": "file",
+            "instructions": "upload the full tiles folder.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62fe54494321c",
+                        "operator": "==",
+                        "value": "pano2vr"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_62dad141ce715",
+            "label": "Pano XML",
+            "name": "pano_xml",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62db15cc35644",
+                        "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_62fe54494321c",
+                        "operator": "==",
+                        "value": "pano2vr"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ".xml"
+        },
+        {
+            "key": "field_62fe54ab4321e",
+            "label": "Video URL",
+            "name": "video_url",
+            "type": "url",
+            "instructions": "url of the hosted video",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62fe54494321c",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6320e11f9e2c8",
+            "label": "Loading Text",
+            "name": "loading_text",
+            "type": "text",
+            "instructions": "This will override the default \"Virtual Tour Loading\" text",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6320df1257040",
+            "label": "Loading Subtext",
+            "name": "loading_subtext",
+            "type": "text",
+            "instructions": "This will override the default \"Enjoy this {video\/virtual tour} while you wait!\" text",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62dad12ace714",
+            "label": "Unreal Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62ed4050660a2",
+            "label": "Virtual Tour Desktop URL",
+            "name": "virtual_tour_desktop",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_62ed506d8c282",
+            "label": "Virtual Tour Mobile URL",
+            "name": "virtual_tour_mobile",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_62dace755bf94",
             "label": "Header",
             "name": "",
@@ -255,164 +467,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_62dad12ace714",
-            "label": "File Uploads",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_62ed4050660a2",
-            "label": "Virtual Tour Desktop URL",
-            "name": "virtual_tour_desktop",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_62ed506d8c282",
-            "label": "Virtual Tour Mobile URL",
-            "name": "virtual_tour_mobile",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62fe54494321c",
-            "label": "Loading Screen Type",
-            "name": "loading_type",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "pano2vr": "Pano2VR",
-                "video": "Video"
-            },
-            "default_value": "pano2vr",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_62db15cc35644",
-            "label": "Upload tiles",
-            "name": "upload_tiles",
-            "type": "file",
-            "instructions": "upload the full tiles folder.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_62fe54494321c",
-                        "operator": "==",
-                        "value": "pano2vr"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_62dad141ce715",
-            "label": "Pano XML",
-            "name": "pano_xml",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_62db15cc35644",
-                        "operator": "!=empty"
-                    },
-                    {
-                        "field": "field_62fe54494321c",
-                        "operator": "==",
-                        "value": "pano2vr"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ".xml"
-        },
-        {
-            "key": "field_62fe54ab4321e",
-            "label": "Video URL",
-            "name": "video_url",
-            "type": "url",
-            "instructions": "url of the hosted video",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_62fe54494321c",
-                        "operator": "==",
-                        "value": "video"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
         }
     ],
     "location": [
@@ -433,5 +487,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661194792
+    "modified": 1663099215
 }

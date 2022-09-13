@@ -943,13 +943,13 @@ a:hover {
 }
 
 #loaderStep2 .loader-container #play-button-wrapper {
-	transition: opacity 1s linear;
-	transition-delay: .4s;
-	opacity: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	transition: opacity 1s ease-in-out;
+	pointer-events: none;
+	opacity: 0;
 }
 
 #loaderStep2 .loader-container #play-button-wrapper p {
@@ -964,14 +964,9 @@ a:hover {
 	position: relative;
 	cursor: pointer;
 	border-radius: 50%;
-	transform: scale(1);
 	animation: pulse 3s infinite;
 	transform: scale(1);
 	box-shadow: 0 0 10px 5px rgba(255,255,255, 0.05);
-}
-
-#loaderStep2.loaded .loader-container #play-button-wrapper {
-	opacity: 1;
 }
 
 #loaderStep2 .loader-container #play-button:hover {

@@ -171,6 +171,9 @@ const messageHandler = (event) => {
 			// Show the play button
 			setTimeout( function () {
 				loaderStep2.classList.add('loaded')
+				setTimeout( () => {
+					$('#play-button-wrapper').css({ opacity: 1, 'pointer-events': 'all' })
+				}, 1000)
 			}, 800)
 
 			// Show the virtual tour
@@ -212,6 +215,7 @@ const messageHandler = (event) => {
 window.addEventListener('message', messageHandler);
 
 window.addEventListener('message', (message) => {
+	console.log('iframe message', message)
 	if (message.data.type === '_focus') {
 		$(iFrame).focus();
 	}
@@ -256,6 +260,7 @@ const checkScreenSize = referrer => {
 				switchIframe('mobile', referrer)
 			}
 		}
+		console.log()
 	}
 }
 

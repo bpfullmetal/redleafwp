@@ -10,6 +10,8 @@
 get_header();
 
 $loader_type = get_field('loading_type');
+$loader_text = get_field('loading_text');
+$loader_subtext = get_field('loading_subtext');
 $virtual_tour_data = [
     'virtual_tour_desktop' => get_field('virtual_tour_desktop'),
     'virtual_tour_mobile' => get_field('virtual_tour_mobile')
@@ -23,7 +25,7 @@ wp_localize_script( 'red-leaf-virtual-tour', 'virtualTourData', $virtual_tour_da
 
 echo get_template_directory_uri() . '/images/tiles'; ?>
     <div id="loaderStep0" class="loader">
-        <?php virtual_tour_loader($loader_type); ?>
+        <?php virtual_tour_loader($loader_type, $loader_text, $loader_subtext); ?>
     </div>
     <div id="loaderStep1"
             style="top: 0px; left: 0px; width: 100%; height: 100%;"
@@ -70,7 +72,7 @@ echo get_template_directory_uri() . '/images/tiles'; ?>
     <div id="resetIframeLoader" class="loader">
         <div class="loader-bg"></div>
         <div class="loader-wrapper">
-            <?php virtual_tour_loader($loader_type); ?>
+            <?php virtual_tour_loader($loader_type, $loader_text); ?>
         </div>
     </div>
 

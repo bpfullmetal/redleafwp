@@ -98,13 +98,19 @@ if ( !function_exists('log_it') ) {
 	}
 }
 
-function virtual_tour_loader ($video) {
+function virtual_tour_loader ($video, $loader_text = false, $loader_subtext = false) {
 	ob_start();
-	$preview_text = $video ? 'Video' : '360' ?>
+	$preview_text = $loader_text ? $loader_text : 'Virtual Tour Loading';
+	$preview_subtext = $loader_subtext ? $loader_subtext : '';
+	if ( !$loader_subtext ) {
+		$loader_type = $video ? 'Video' : '360';
+		$preview_subtext = 'Enjoy This ' . $loader_type . ' Preview While You Wait!';
+	}
+	if ( $loading_text = get_field('loading_text')) ?>
 	<div class="loader-container">
 		<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-		<span class="loading-virtual-tour">Virtual Tour Loading</span>
-		<span class="loading-text">Enjoy This <?php echo $preview_text; ?> Preview While You Wait!</span>
+		<span class="loading-virtual-tour"><?php echo $preview_text; ?></span>
+		<span class="loading-text"><?php echo $preview_subtext; ?></span>
 	</div>
 	<?php
 	echo ob_get_clean();
