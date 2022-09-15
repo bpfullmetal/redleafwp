@@ -254,17 +254,17 @@ const hideInstructions = () => {
 const checkScreenSize = referrer => {
 	const windowWidth = $(window).width()
 	const windowRatio = windowWidth / $(window).height()
-	const videoRatio = 16/9
+	const videoRatio = windowWidth > 1024 ? 16/9 : .64
 	if ( $(iFrame).length ) {
+		if ( windowRatio <= videoRatio ) {
+			$('body').addClass('portrait')
+		} else {
+			$('body').removeClass('portrait')
+		}
 		if ( windowWidth > 1024 ) {
 			if ( iFrame.src !== iframes.desktop ) {
 				switchIframe('desktop', referrer)
 				hideInstructions()
-			}
-			if ( windowRatio <= videoRatio ) {
-				$('body').addClass('portrait')
-			} else {
-				$('body').removeClass('portrait')
 			}
 		} else {
 			if ( iFrame.src !== iframes.mobile ) {

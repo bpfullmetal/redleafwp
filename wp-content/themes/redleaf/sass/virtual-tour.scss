@@ -364,11 +364,17 @@ body.playing #header {
 }
 
 @media (max-width: 1024px) {
-	#player, .portrait #player {
+	#player {
+		width: 100%;
+		height: 0;
+		padding-bottom: 192%;
+		padding-right: 0;
+	}
+	.portrait #player {
 		width: 0;
 		height: 100vh;
 		padding-bottom: 0;
-		padding-right: 132%;
+		padding-right: 146%;
 	}
 }
 

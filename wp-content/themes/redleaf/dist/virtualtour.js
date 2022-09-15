@@ -11232,19 +11232,19 @@ var hideInstructions = function hideInstructions() {
 var checkScreenSize = function checkScreenSize(referrer) {
   var windowWidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
   var windowRatio = windowWidth / jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height();
-  var videoRatio = 16 / 9;
+  var videoRatio = windowWidth > 1024 ? 16 / 9 : .64;
 
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(iFrame).length) {
+    if (windowRatio <= videoRatio) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('portrait');
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('portrait');
+    }
+
     if (windowWidth > 1024) {
       if (iFrame.src !== iframes.desktop) {
         switchIframe('desktop', referrer);
         hideInstructions();
-      }
-
-      if (windowRatio <= videoRatio) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('portrait');
-      } else {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('portrait');
       }
     } else {
       if (iFrame.src !== iframes.mobile) {
